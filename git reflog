@@ -20,17 +20,12 @@ Per default, all reflogs are activated for non-bare repositories:
 
 git log -g
 -----------------
-
-
 Actually, rebase saves your starting point to ORIG_HEAD so this is usually as simple as:
 
 git reset --hard ORIG_HEAD
 However, the reset, rebase and merge all save your original HEAD pointer into ORIG_HEAD so, if you've done any of those commands since the rebase you're trying to undo then you'll have to use the reflog
-
 ----------------
-
-
-
+-- Rebase code
 git checkout feature
 git branch old-feature
 git rebase master
